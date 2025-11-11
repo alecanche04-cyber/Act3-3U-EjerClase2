@@ -29,3 +29,15 @@ def salir(): # Función para salir del programa
     respiuesta = input("¿Desea salir del programa? (si/no): ").strip().lower() # Solicita confirmación al usuario
     return respiuesta == 'si' # Retorna True si el usuario desea salir, de lo contrario False
 
+def Mostrar_Titulo():
+    
+    print("╔" + "═" * 38 + "╗")
+    print("║     Unidad_3_Tarea_2    ║")
+    print("║              ¡Bienvenido!                ║")
+    print("╚" + "═" * 38 + "╝")
+    
+def limpiar_Consola():
+    import os
+    input("Presiona Enter para continuar...")
+    
+    os.system('cls' if os.name == 'nt' else 'clear')
