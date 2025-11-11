@@ -5,6 +5,7 @@ def es_bisiesto(año):
         return True
     else:
         return False
+    
 def dia_1_enero(año):
     # Algoritmo de Zeller modificado para calcular el día de la semana del 1 de enero
     q = 1  # Día del mes
@@ -14,8 +15,7 @@ def dia_1_enero(año):
 
     # Fórmula de Zeller
     f = q + ((13 * (m + 1)) // 5) + K + (K // 4) + (J // 4) - (2 * J)
-    dia_semana = f % 7 #Sacamos el modulo que va a indicar el dia de la semana
-    # Ajustar para que 0 = Domingo, 1 = Lunes, etc...
-    dia_semana = (dia_semana + 7) % 7
+    # Ajuste para que 0 = Domingo, 1 = Lunes, ... (la fórmula original queda desplazada en +1)
+    dia_semana = (f - 1) % 7
 
     return dia_semana
