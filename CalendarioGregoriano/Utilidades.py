@@ -25,5 +25,7 @@ def leer_año(): # Solicita al usuario que ingrese un año válido
         except ValueError:
             print("Entrada inválida. Por favor, ingrese un número entero.")
 
-
+def salir(): # Función para salir del programa
+    respiuesta = input("¿Desea salir del programa? (si/no): ").strip().lower() # Solicita confirmación al usuario
+    return respiuesta == 'si' # Retorna True si el usuario desea salir, de lo contrario False
 
